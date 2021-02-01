@@ -8,7 +8,6 @@
 
 package com.example.common.common.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.ReflectionKit;
@@ -16,14 +15,12 @@ import com.example.common.common.annotation.OutTablesField;
 import com.example.common.common.dao.OutTablesDao;
 import com.example.common.common.page.PageData;
 import com.example.common.common.service.CrudService;
-import com.example.common.common.service.OutTablesService;
 import com.example.common.common.utils.ConvertUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.Field;
 import java.util.*;
-import java.util.function.BiConsumer;
 
 /**
  *  CRUD基础服务类
