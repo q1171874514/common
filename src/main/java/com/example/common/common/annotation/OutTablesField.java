@@ -41,4 +41,5 @@ public @interface OutTablesField {
      * @return
      */
     int type() default 1;
+
 }
