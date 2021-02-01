@@ -33,4 +33,5 @@ public interface CrudService<T, D> extends BaseService<T> {
 
     void delete(Long[] ids);
 
+    D addOutTablesField(D dto, Map<String, Map> outTablesEntityMap);
 }

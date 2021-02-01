@@ -12,9 +12,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.lang.reflect.Field;
+import java.util.*;
+import java.util.function.BiConsumer;
 
 /**
  * 转换工具类
@@ -57,4 +57,5 @@ public class ConvertUtils {
 
         return targetList;
     }
+
 }

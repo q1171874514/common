@@ -11,8 +11,8 @@ package com.example.common.common.validator;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.ArrayUtil;
-import com.example.authority.common.exception.ErrorCode;
-import com.example.authority.common.exception.RenException;
+import com.example.common.common.exception.ErrorCode;
+import com.example.common.common.exception.RenException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;

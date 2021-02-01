@@ -33,7 +33,7 @@ public class RedisAspect {
     @Value("${renren.redis.open: false}")
     private boolean open;
 
-    @Around("execution(* io.renren.common.redis.RedisUtils.*(..))")
+    @Around("execution(* com.example.common.common.redis.RedisUtils.*(..))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
         Object result = null;
         if(open){

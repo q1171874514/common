@@ -9,6 +9,7 @@
 package com.example.common.common.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.enums.SqlMethod;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -39,6 +40,8 @@ import java.util.Map;
 public abstract class BaseServiceImpl<M extends BaseMapper<T>, T>  implements BaseService<T> {
     @Autowired
     protected M baseDao;
+
+    public abstract QueryWrapper<T> getWrapper(Map<String, Object> params);
 
     /**
      * 获取分页对象
@@ -90,16 +93,6 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T>  implements Ba
         }
 
         return page;
-    }
-
-    protected <T> PageData<T> getPageData(List<?> list, long total, Class<T> target){
-        List<T> targetList = ConvertUtils.sourceToTarget(list, target);
-
-        return new PageData<>(targetList, total);
-    }
-
-    protected <T> PageData<T> getPageData(IPage page, Class<T> target){
-        return getPageData(page.getRecords(), page.getTotal(), target);
     }
 
     protected Map<String, Object> paramsToLike(Map<String, Object> params, String... likes){

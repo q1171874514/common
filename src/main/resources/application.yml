@@ -1,1 +1,12 @@
+spring:
+  application:
+    name: microserver-product #这个很重要，这在以后的服务与服务之间相互调用一般都是根据这个name
+# 是否开启redis缓存  true开启   false关闭
+renren.redis.open: false
 
+server:
+  port: 8081
+mybatis:
+  type-aliases-package: com.example.common.modules.**.entity # entity别名类所在包
+  mapperLocations: classpath:mapper/**/*.xml
+  configLocation: classpath:/mybatis-config.xml # mapper映射文件
